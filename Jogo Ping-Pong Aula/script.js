@@ -24,6 +24,7 @@ function draw() {
     verificaColisaoBorda();
     criarRaquete(x, y);        
     criarRaquete(xRaquete2, y);
+    movimentaMinhaRaquete(); 
 }
 
 function mostraBolinha() {
@@ -48,6 +49,15 @@ function verificaColisaoBorda() {
 function criarRaquete(xPos, yPos){
     //X,Y, raqueteComprimento, raqueteAltura
     rect(xPos, yPos, raqueteComprimento, raqueteAltura);
+}
+
+function movimentaMinhaRaquete(){
+    if(keyIsDown(UP_ARROW)){
+        y -= 10; 
+    }
+    if(keyIsDown(DOWN_ARROW)){
+        y += 10;
+    }
 }
 
 
